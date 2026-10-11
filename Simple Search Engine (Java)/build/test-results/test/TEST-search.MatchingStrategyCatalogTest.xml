@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="search.MatchingStrategyCatalogTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-04T15:19:42.238Z" hostname="SARUMAN" time="0.003">
+  <properties/>
+  <testcase name="findByName_unknownName_returnsNothing()" classname="search.MatchingStrategyCatalogTest" time="0.0"/>
+  <testcase name="findByName_allInLowercase_returnsTheAllWordsStrategy()" classname="search.MatchingStrategyCatalogTest" time="0.001"/>
+  <testcase name="availableNames_customStrategies_listsOnlyThoseNames()" classname="search.MatchingStrategyCatalogTest" time="0.0"/>
+  <testcase name="findByName_anySurroundedBySpaces_returnsTheAnyWordStrategy()" classname="search.MatchingStrategyCatalogTest" time="0.0"/>
+  <testcase name="findByName_none_returnsTheNoWordsStrategy()" classname="search.MatchingStrategyCatalogTest" time="0.0"/>
+  <testcase name="findByName_customStrategy_returnsTheInjectedStrategy()" classname="search.MatchingStrategyCatalogTest" time="0.001"/>
+  <testcase name="availableNames_defaultStrategies_listsThemInMenuOrder()" classname="search.MatchingStrategyCatalogTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

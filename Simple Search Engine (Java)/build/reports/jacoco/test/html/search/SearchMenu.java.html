@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SearchMenu.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">simple-search-engine</a> &gt; <a href="index.source.html" class="el_package">search</a> &gt; <span class="el_source">SearchMenu.java</span></div><h1>SearchMenu.java</h1><pre class="source lang-java linenums">package search;
+
+import java.util.Arrays;
+import java.util.Optional;
+
+/**
+ * Drives the dialogue with the user: shows the menu and carries out the chosen action.
+ */
+public class SearchMenu {
+    static final String MENU_HEADER = &quot;=== Menu ===&quot;;
+    static final String INCORRECT_OPTION_MESSAGE = &quot;Incorrect option! Try again.&quot;;
+    static final String STRATEGY_PROMPT = &quot;Select a matching strategy: &quot;;
+    static final String INCORRECT_STRATEGY_MESSAGE = &quot;Incorrect strategy! Try again.&quot;;
+    static final String QUERY_PROMPT = &quot;Enter a name or email to search all suitable people.&quot;;
+    static final String FAREWELL_MESSAGE = &quot;Bye!&quot;;
+    private static final String BLANK_LINE = &quot;&quot;;
+
+    private final TextIO io;
+    private final PersonDirectory directory;
+    private final PeoplePresenter presenter;
+    private final MatchingStrategyCatalog strategies;
+
+    public SearchMenu(TextIO io,
+                      PersonDirectory directory,
+                      PeoplePresenter presenter,
+<span class="fc" id="L26">                      MatchingStrategyCatalog strategies) {</span>
+<span class="fc" id="L27">        this.io = io;</span>
+<span class="fc" id="L28">        this.directory = directory;</span>
+<span class="fc" id="L29">        this.presenter = presenter;</span>
+<span class="fc" id="L30">        this.strategies = strategies;</span>
+<span class="fc" id="L31">    }</span>
+
+    public void run() {
+<span class="fc" id="L34">        boolean running = true;</span>
+<span class="fc bfc" id="L35" title="All 2 branches covered.">        while (running) {</span>
+<span class="fc" id="L36">            showMenu();</span>
+<span class="fc" id="L37">            running = executeChosenOption();</span>
+        }
+<span class="fc" id="L39">        io.println(FAREWELL_MESSAGE);</span>
+<span class="fc" id="L40">    }</span>
+
+    private void showMenu() {
+<span class="fc" id="L43">        io.println(BLANK_LINE);</span>
+<span class="fc" id="L44">        io.println(MENU_HEADER);</span>
+<span class="fc" id="L45">        Arrays.stream(MenuOption.values()).forEach(option -&gt; io.println(option.menuLine()));</span>
+<span class="fc" id="L46">    }</span>
+
+    private boolean executeChosenOption() {
+<span class="fc" id="L49">        Optional&lt;MenuOption&gt; chosen = MenuOption.forInput(io.readLine());</span>
+<span class="fc" id="L50">        io.println(BLANK_LINE);</span>
+<span class="fc bfc" id="L51" title="All 2 branches covered.">        if (chosen.isEmpty()) {</span>
+<span class="fc" id="L52">            io.println(INCORRECT_OPTION_MESSAGE);</span>
+<span class="fc" id="L53">            return true;</span>
+        }
+<span class="pc bpc" id="L55" title="1 of 4 branches missed.">        switch (chosen.get()) {</span>
+<span class="fc" id="L56">            case FIND_PERSON -&gt; findPeople();</span>
+<span class="fc" id="L57">            case PRINT_ALL_PEOPLE -&gt; presenter.printAllPeople(directory.allPeople());</span>
+            case EXIT -&gt; {
+<span class="fc" id="L59">                return false;</span>
+            }
+        }
+<span class="fc" id="L62">        return true;</span>
+    }
+
+    private void findPeople() {
+<span class="fc" id="L66">        Optional&lt;MatchingStrategy&gt; strategy = askForStrategy();</span>
+<span class="fc bfc" id="L67" title="All 2 branches covered.">        if (strategy.isEmpty()) {</span>
+<span class="fc" id="L68">            io.println(INCORRECT_STRATEGY_MESSAGE);</span>
+<span class="fc" id="L69">            return;</span>
+        }
+<span class="fc" id="L71">        presenter.printSearchResults(directory.findPeople(askForQuery(), strategy.get()));</span>
+<span class="fc" id="L72">    }</span>
+
+    private Optional&lt;MatchingStrategy&gt; askForStrategy() {
+<span class="fc" id="L75">        io.println(STRATEGY_PROMPT + strategies.availableNames());</span>
+<span class="fc" id="L76">        Optional&lt;MatchingStrategy&gt; strategy = strategies.findByName(io.readLine());</span>
+<span class="fc" id="L77">        io.println(BLANK_LINE);</span>
+<span class="fc" id="L78">        return strategy;</span>
+    }
+
+    private String askForQuery() {
+<span class="fc" id="L82">        io.println(QUERY_PROMPT);</span>
+<span class="fc" id="L83">        String query = io.readLine();</span>
+<span class="fc" id="L84">        io.println(BLANK_LINE);</span>
+<span class="fc" id="L85">        return query;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>

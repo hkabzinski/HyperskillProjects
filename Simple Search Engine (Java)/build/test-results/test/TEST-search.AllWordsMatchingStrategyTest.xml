@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="search.AllWordsMatchingStrategyTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-04T15:19:42.160Z" hostname="SARUMAN" time="0.039">
+  <properties/>
+  <testcase name="matchingPositions_singleWordOfTwoPeople_returnsBothPositions()" classname="search.AllWordsMatchingStrategyTest" time="0.019"/>
+  <testcase name="matchingPositions_wordsOfDifferentPeople_returnsNoPositions()" classname="search.AllWordsMatchingStrategyTest" time="0.001"/>
+  <testcase name="matchingPositions_queryWithoutWords_returnsNoPositions()" classname="search.AllWordsMatchingStrategyTest" time="0.001"/>
+  <testcase name="matchingPositions_queryContainingAnUnknownWord_returnsNoPositions()" classname="search.AllWordsMatchingStrategyTest" time="0.0"/>
+  <testcase name="matchingPositions_wordsOfTheSamePerson_returnsThatPerson()" classname="search.AllWordsMatchingStrategyTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

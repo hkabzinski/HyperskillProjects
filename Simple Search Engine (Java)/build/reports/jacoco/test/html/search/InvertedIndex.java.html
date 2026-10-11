@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>InvertedIndex.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">simple-search-engine</a> &gt; <a href="index.source.html" class="el_package">search</a> &gt; <span class="el_source">InvertedIndex.java</span></div><h1>InvertedIndex.java</h1><pre class="source lang-java linenums">package search;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
+/**
+ * Maps every word to the positions of the people it occurs in, so a whole word can be looked up
+ * without comparing it against every person.
+ *
+ * &lt;p&gt;Words are expected to be normalized by the same {@link WordTokenizer} that built the index.
+ */
+public class InvertedIndex {
+<span class="fc" id="L18">    private final Map&lt;String, Set&lt;Integer&gt;&gt; positionsByWord = new HashMap&lt;&gt;();</span>
+    private final int indexedPersonCount;
+
+<span class="fc" id="L21">    public InvertedIndex(List&lt;Person&gt; people, WordTokenizer tokenizer) {</span>
+<span class="fc bfc" id="L22" title="All 2 branches covered.">        for (int position = 0; position &lt; people.size(); position++) {</span>
+<span class="fc" id="L23">            indexWordsOf(people.get(position), position, tokenizer);</span>
+        }
+<span class="fc" id="L25">        this.indexedPersonCount = people.size();</span>
+<span class="fc" id="L26">    }</span>
+
+    public Set&lt;Integer&gt; positionsOf(String word) {
+<span class="fc" id="L29">        return Set.copyOf(positionsByWord.getOrDefault(word, Set.of()));</span>
+    }
+
+    public Set&lt;Integer&gt; allPositions() {
+<span class="fc" id="L33">        return IntStream.range(0, indexedPersonCount).boxed().collect(Collectors.toSet());</span>
+    }
+
+    private void indexWordsOf(Person person, int position, WordTokenizer tokenizer) {
+<span class="fc bfc" id="L37" title="All 2 branches covered.">        for (String word : tokenizer.wordsIn(person.details())) {</span>
+<span class="fc" id="L38">            positionsByWord.computeIfAbsent(word, indexedWord -&gt; new HashSet&lt;&gt;()).add(position);</span>
+<span class="fc" id="L39">        }</span>
+<span class="fc" id="L40">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>

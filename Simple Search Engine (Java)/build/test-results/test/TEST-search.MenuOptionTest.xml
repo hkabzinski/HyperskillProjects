@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="search.MenuOptionTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-04T15:19:42.241Z" hostname="SARUMAN" time="0.003">
+  <properties/>
+  <testcase name="menuLine_findPerson_showsItsNumberAndLabel()" classname="search.MenuOptionTest" time="0.0"/>
+  <testcase name="forInput_emptyInput_returnsNothing()" classname="search.MenuOptionTest" time="0.0"/>
+  <testcase name="forInput_zero_returnsExit()" classname="search.MenuOptionTest" time="0.001"/>
+  <testcase name="forInput_optionSurroundedBySpaces_returnsThatOption()" classname="search.MenuOptionTest" time="0.0"/>
+  <testcase name="forInput_text_returnsNothing()" classname="search.MenuOptionTest" time="0.0"/>
+  <testcase name="forInput_numberThatIsNotOnTheMenu_returnsNothing()" classname="search.MenuOptionTest" time="0.0"/>
+  <testcase name="forInput_one_returnsFindPerson()" classname="search.MenuOptionTest" time="0.001"/>
+  <testcase name="forInput_two_returnsPrintAllPeople()" classname="search.MenuOptionTest" time="0.0"/>
+  <testcase name="menuLine_exit_showsItsNumberAndLabel()" classname="search.MenuOptionTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

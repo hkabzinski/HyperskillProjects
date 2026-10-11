@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="search.CommandLineArgumentsTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-04T15:19:42.203Z" hostname="SARUMAN" time="0.003">
+  <properties/>
+  <testcase name="dataFileName_noArguments_returnsNothing()" classname="search.CommandLineArgumentsTest" time="0.001"/>
+  <testcase name="dataFileName_dataOptionWithoutName_returnsNothing()" classname="search.CommandLineArgumentsTest" time="0.0"/>
+  <testcase name="dataFileName_otherOptionOnly_returnsNothing()" classname="search.CommandLineArgumentsTest" time="0.0"/>
+  <testcase name="dataFileName_dataOptionAfterAnotherOption_returnsTheName()" classname="search.CommandLineArgumentsTest" time="0.0"/>
+  <testcase name="dataFileName_dataOptionFollowedByName_returnsThatName()" classname="search.CommandLineArgumentsTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

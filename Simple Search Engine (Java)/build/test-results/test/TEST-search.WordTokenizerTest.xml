@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="search.WordTokenizerTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-04T15:19:42.276Z" hostname="SARUMAN" time="0.003">
+  <properties/>
+  <testcase name="wordsIn_lineWithExtraSpaces_returnsWordsWithoutEmptyOnes()" classname="search.WordTokenizerTest" time="0.0"/>
+  <testcase name="wordsIn_mixedCaseLine_returnsLowercasedWords()" classname="search.WordTokenizerTest" time="0.0"/>
+  <testcase name="wordsIn_emptyText_returnsNoWords()" classname="search.WordTokenizerTest" time="0.0"/>
+  <testcase name="wordsIn_singleWord_returnsThatWord()" classname="search.WordTokenizerTest" time="0.001"/>
+  <testcase name="wordsIn_onlySpaces_returnsNoWords()" classname="search.WordTokenizerTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

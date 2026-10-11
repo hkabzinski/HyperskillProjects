@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tictactoe.GameStateAnalyzerTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-04T14:47:10.886Z" hostname="SARUMAN" time="0.003">
+  <properties/>
+  <testcase name="analyze_lineOfXOnFullBoard_isXWins()" classname="tictactoe.GameStateAnalyzerTest" time="0.001"/>
+  <testcase name="analyze_lineOfO_isOWins()" classname="tictactoe.GameStateAnalyzerTest" time="0.0"/>
+  <testcase name="analyze_noLineAndFullBoard_isDraw()" classname="tictactoe.GameStateAnalyzerTest" time="0.001"/>
+  <testcase name="analyze_emptyBoard_isNotFinished()" classname="tictactoe.GameStateAnalyzerTest" time="0.0"/>
+  <testcase name="analyze_lineOfXWithEmptyCells_isXWins()" classname="tictactoe.GameStateAnalyzerTest" time="0.001"/>
+  <testcase name="analyze_noLineAndEmptyCells_isNotFinished()" classname="tictactoe.GameStateAnalyzerTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

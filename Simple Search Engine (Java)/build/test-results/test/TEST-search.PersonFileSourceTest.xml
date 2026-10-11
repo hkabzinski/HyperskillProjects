@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="search.PersonFileSourceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-04T15:19:42.254Z" hostname="SARUMAN" time="0.015">
+  <properties/>
+  <testcase name="readPeople_lineWithExtraSpaces_keepsTheLineVerbatim()" classname="search.PersonFileSourceTest" time="0.008"/>
+  <testcase name="readPeople_fileWithBlankLine_skipsThatLine()" classname="search.PersonFileSourceTest" time="0.002"/>
+  <testcase name="readPeople_missingFile_throwsUncheckedIOException()" classname="search.PersonFileSourceTest" time="0.001"/>
+  <testcase name="readPeople_fileWithTwoLines_returnsOnePersonPerLine()" classname="search.PersonFileSourceTest" time="0.002"/>
+  <testcase name="readPeople_emptyFile_returnsNoPeople()" classname="search.PersonFileSourceTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

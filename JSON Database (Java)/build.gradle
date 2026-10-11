@@ -1,0 +1,64 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'jacoco'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'com.beust:jcommander:1.82'
+    testImplementation platform('org.junit:junit-bom:5.11.4')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+application {
+    mainClass = 'server.Main'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'utf-8'
+}
+
+tasks.register('runServer', JavaExec) {
+    group = 'application'
+    description = 'Starts the database server.'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'server.Main'
+}
+
+tasks.register('runClient', JavaExec) {
+    group = 'application'
+    description = "Sends one request, e.g. ../gradlew runClient --args='-t set -k name -v Sorabh'"
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'client.Main'
+}
+
+test {
+    useJUnitPlatform()
+    finalizedBy jacocoTestReport
+}
+
+jacocoTestReport {
+    dependsOn test
+    reports {
+        csv.required = true
+    }
+}
+
+jacocoTestCoverageVerification {
+    dependsOn test
+    violationRules {
+        rule {
+            limit {
+                minimum = 0.8
+            }
+        }
+    }
+}
+
+check.dependsOn jacocoTestCoverageVerification

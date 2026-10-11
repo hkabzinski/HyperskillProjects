@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PersonDirectory.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">simple-search-engine</a> &gt; <a href="index.source.html" class="el_package">search</a> &gt; <span class="el_source">PersonDirectory.java</span></div><h1>PersonDirectory.java</h1><pre class="source lang-java linenums">package search;
+
+import java.util.List;
+import java.util.Set;
+
+/**
+ * The people the program searches through, looked up through an inverted index.
+ */
+public class PersonDirectory {
+    private final List&lt;Person&gt; people;
+    private final InvertedIndex index;
+    private final WordTokenizer tokenizer;
+
+<span class="fc" id="L14">    public PersonDirectory(List&lt;Person&gt; people, InvertedIndex index, WordTokenizer tokenizer) {</span>
+<span class="fc" id="L15">        this.people = List.copyOf(people);</span>
+<span class="fc" id="L16">        this.index = index;</span>
+<span class="fc" id="L17">        this.tokenizer = tokenizer;</span>
+<span class="fc" id="L18">    }</span>
+
+    public List&lt;Person&gt; allPeople() {
+<span class="fc" id="L21">        return people;</span>
+    }
+
+    public List&lt;Person&gt; findPeople(String query, MatchingStrategy strategy) {
+<span class="fc" id="L25">        Set&lt;Integer&gt; positions = strategy.matchingPositions(tokenizer.wordsIn(query), index);</span>
+<span class="fc" id="L26">        return positions.stream()</span>
+<span class="fc" id="L27">                .sorted()</span>
+<span class="fc" id="L28">                .map(people::get)</span>
+<span class="fc" id="L29">                .toList();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>

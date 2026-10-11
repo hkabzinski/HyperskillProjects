@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tictactoe.BoardFormatterTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-04T14:47:10.691Z" hostname="SARUMAN" time="0.059">
+  <properties/>
+  <testcase name="format_boardWithMarks_printsEachMarkInItsCell()" classname="tictactoe.BoardFormatterTest" time="0.035"/>
+  <testcase name="format_emptyBoard_printsBlankCellsInsideBorders()" classname="tictactoe.BoardFormatterTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

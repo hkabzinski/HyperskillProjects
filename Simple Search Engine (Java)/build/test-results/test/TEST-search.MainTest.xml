@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="search.MainTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-04T15:19:42.219Z" hostname="SARUMAN" time="0.018">
+  <properties/>
+  <testcase name="main_exitChosenRightAway_saysGoodbye()" classname="search.MainTest" time="0.012"/>
+  <testcase name="main_dataFileAndASearchOnStandardInput_printsTheMatchingPerson()" classname="search.MainTest" time="0.004"/>
+  <testcase name="main_withoutTheDataOption_explainsHowToPassTheDataFile()" classname="search.MainTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

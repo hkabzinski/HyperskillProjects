@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="search.SearchMenuTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-10-04T15:19:42.270Z" hostname="SARUMAN" time="0.006">
+  <properties/>
+  <testcase name="run_findWithAllStrategy_printsOnlyThePeopleMatchingEveryWord()" classname="search.SearchMenuTest" time="0.0"/>
+  <testcase name="run_findChosen_asksWhichStrategyToUse()" classname="search.SearchMenuTest" time="0.0"/>
+  <testcase name="run_optionThatIsNotOnTheMenu_complainsAndShowsTheMenuAgain()" classname="search.SearchMenuTest" time="0.0"/>
+  <testcase name="run_findChosen_asksForTheSearchQuery()" classname="search.SearchMenuTest" time="0.0"/>
+  <testcase name="run_exitChosen_printsTheMenuAndSaysGoodbye()" classname="search.SearchMenuTest" time="0.0"/>
+  <testcase name="run_exitChosen_stopsReadingFurtherInput()" classname="search.SearchMenuTest" time="0.0"/>
+  <testcase name="run_queryNobodyMatches_printsTheNoMatchesMessage()" classname="search.SearchMenuTest" time="0.001"/>
+  <testcase name="run_findWithAnyStrategy_printsEveryPersonMatchingAtLeastOneWord()" classname="search.SearchMenuTest" time="0.0"/>
+  <testcase name="run_findWithNoneStrategy_printsThePeopleMatchingNoWord()" classname="search.SearchMenuTest" time="0.001"/>
+  <testcase name="run_printAllPeopleChosen_printsEveryPersonInTheDirectory()" classname="search.SearchMenuTest" time="0.0"/>
+  <testcase name="run_strategyThatDoesNotExist_complainsWithoutAskingForAQuery()" classname="search.SearchMenuTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

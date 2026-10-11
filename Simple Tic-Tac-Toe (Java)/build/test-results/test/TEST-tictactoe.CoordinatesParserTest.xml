@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tictactoe.CoordinatesParserTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-04T14:47:10.869Z" hostname="SARUMAN" time="0.016">
+  <properties/>
+  <testcase name="parse_numbersWithExtraWhitespace_ignoresTheWhitespace()" classname="tictactoe.CoordinatesParserTest" time="0.007"/>
+  <testcase name="parse_twoNumbers_returnsRowThenColumn()" classname="tictactoe.CoordinatesParserTest" time="0.0"/>
+  <testcase name="[1] one" classname="tictactoe.CoordinatesParserTest" time="0.001"/>
+  <testcase name="[2] one one" classname="tictactoe.CoordinatesParserTest" time="0.0"/>
+  <testcase name="[3] 1 one" classname="tictactoe.CoordinatesParserTest" time="0.0"/>
+  <testcase name="[4] 1" classname="tictactoe.CoordinatesParserTest" time="0.001"/>
+  <testcase name="[5] 1 2 3" classname="tictactoe.CoordinatesParserTest" time="0.001"/>
+  <testcase name="[6] " classname="tictactoe.CoordinatesParserTest" time="0.0"/>
+  <testcase name="[7] 1.5 2" classname="tictactoe.CoordinatesParserTest" time="0.0"/>
+  <testcase name="parse_numbersOutsideTheBoard_stillReturnsThem()" classname="tictactoe.CoordinatesParserTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

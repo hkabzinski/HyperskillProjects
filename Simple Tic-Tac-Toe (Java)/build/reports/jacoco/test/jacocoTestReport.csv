@@ -1,0 +1,12 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+simple-tic-tac-toe,tictactoe,BoardFormatter,0,66,0,4,0,10,0,6,0,4
+simple-tic-tac-toe,tictactoe,InvalidMoveException,0,4,0,0,0,2,0,1,0,1
+simple-tic-tac-toe,tictactoe,Game,0,94,0,4,0,28,0,6,0,4
+simple-tic-tac-toe,tictactoe,Mark,0,48,0,3,0,12,0,6,0,4
+simple-tic-tac-toe,tictactoe,Coordinates,0,9,0,0,0,1,0,1,0,1
+simple-tic-tac-toe,tictactoe,Board,0,212,0,38,0,33,0,29,0,10
+simple-tic-tac-toe,tictactoe,CoordinatesParser,0,35,0,2,0,7,0,3,0,2
+simple-tic-tac-toe,tictactoe,GameStateAnalyzer,0,22,0,6,0,6,0,5,0,2
+simple-tic-tac-toe,tictactoe,Main,3,10,0,0,1,2,1,1,1,1
+simple-tic-tac-toe,tictactoe,ConsoleIO,0,26,0,0,0,9,0,4,0,4
+simple-tic-tac-toe,tictactoe,GameState,0,42,0,0,0,9,0,3,0,3

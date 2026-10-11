@@ -1,0 +1,16 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+simple-search-engine,search,ConsoleIO,0,26,0,0,0,9,0,4,0,4
+simple-search-engine,search,MatchingStrategyCatalog,0,58,0,0,0,11,0,4,0,4
+simple-search-engine,search,Main,3,63,0,2,1,13,1,3,1,2
+simple-search-engine,search,PersonDirectory,0,37,0,0,0,11,0,3,0,3
+simple-search-engine,search,SearchMenu,0,146,1,9,0,40,1,13,0,8
+simple-search-engine,search,CommandLineArguments,0,32,0,4,0,8,0,4,0,2
+simple-search-engine,search,MenuOption,0,57,0,0,0,12,0,5,0,5
+simple-search-engine,search,PeoplePresenter,0,43,0,2,0,14,0,6,0,5
+simple-search-engine,search,Person,0,6,0,0,0,1,0,1,0,1
+simple-search-engine,search,InvertedIndex,0,74,0,4,0,12,0,7,0,5
+simple-search-engine,search,AnyWordMatchingStrategy,0,17,0,0,0,5,0,2,0,2
+simple-search-engine,search,NoWordsMatchingStrategy,0,22,0,0,0,6,0,2,0,2
+simple-search-engine,search,PersonFileSource,0,33,0,2,0,9,0,4,0,3
+simple-search-engine,search,AllWordsMatchingStrategy,0,28,0,0,0,8,0,3,0,3
+simple-search-engine,search,WordTokenizer,0,23,0,2,0,7,0,4,0,3
