@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'application'
     id 'jacoco'
+    id 'idea'
 }
 
 repositories {
@@ -20,6 +21,12 @@ application {
 
 tasks.withType(JavaCompile) {
     options.encoding = 'utf-8'
+}
+
+idea {
+    module {
+        excludeDirs += file('stages')
+    }
 }
 
 run {

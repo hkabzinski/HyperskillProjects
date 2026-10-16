@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'application'
     id 'jacoco'
+    id 'idea'
 }
 
 repositories {
@@ -22,6 +23,16 @@ application {
 
 tasks.withType(JavaCompile) {
     options.encoding = 'utf-8'
+}
+
+// 'stages' keeps the earlier Hyperskill stage solutions for reference. Each file there
+// declares another `server.Main` or `client.Main`, so it must stay out of the source sets
+// and out of the IDE's view. 'src/client/data' and 'src/server/data' are runtime working
+// directories read through paths relative to the project folder, not resource roots.
+idea {
+    module {
+        excludeDirs += file('stages')
+    }
 }
 
 tasks.register('runServer', JavaExec) {
